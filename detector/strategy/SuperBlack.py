@@ -3,7 +3,7 @@ from detector.strategy.IStrategy import IStrategy
 
 class SuperBlack(IStrategy):
     def __init__(self):
-        self.hit = False
+        self.hit = 0
         self.IS_DETECT_URL = False
         self.connectDB()
 
@@ -20,9 +20,9 @@ class SuperBlack(IStrategy):
                 cursor.execute(sql)
                 results = cursor.fetchall()
                 if len(results):
-                    self.hit = True
+                    self.hit = 1
             except:
-                self.hit = False
+                self.hit = 0
 
     def isHit(self):
         return self.hit

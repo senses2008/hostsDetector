@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-'To detect hosts infection'
+'To detect hosts file infection'
 
 __author__ = 'Sunnie Chen'
 

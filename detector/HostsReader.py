@@ -1,6 +1,9 @@
 import platform
 
 class HostsReader:
+    '''
+    读取Hosts文件
+    '''
     def __init__(self):
         if self.isWindowsPlatform():
             self.fileName = 'C:\Windows\System32\drivers\etc\hosts'

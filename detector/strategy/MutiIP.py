@@ -2,7 +2,7 @@ from detector.strategy.IStrategy import IStrategy
 
 class MutilIP(IStrategy):
     def __init__(self):
-        self.hit = False
+        self.hit = 0
         self.ipCount = {}
         self.IP_COUNT_LIMIT = 2
         
@@ -14,7 +14,7 @@ class MutilIP(IStrategy):
         else:
             self.ipCount[host.getIP()] = 1
         if self.ipCount[host.getIP()] > self.IP_COUNT_LIMIT:
-            self.hit = True
+            self.hit = 1
 
     def isHit(self):
         return self.hit

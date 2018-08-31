@@ -2,7 +2,7 @@ from detector.strategy.IStrategy import IStrategy
 
 class MutilReturn(IStrategy):
     def __init__(self):
-        self.hit = False
+        self.hit = 0
         self.returnTimes = 0
         self.MAX_RETURNS = 2
 
@@ -12,10 +12,10 @@ class MutilReturn(IStrategy):
         else:
             self.returnTimes = 0
         if self.returnTimes > self.MAX_RETURNS:
-            self.hit = True
+            self.hit = 1
         
     def isHit(self):
-        return self.isHit
+        return self.hit
 
     def print(self):
         print('    是否存在连续回车:' + str(self.hit))

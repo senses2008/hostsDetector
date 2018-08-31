@@ -23,7 +23,7 @@ class StrategyList:
     def result(self):
         ret = 0
         for o in self.observers:
-            ret = ret or o.isHit()
+            ret = ret | o.isHit()
 
         return ret
 
